@@ -6,8 +6,4 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\PaymentContext.Domain\PaymentContext.Domain.csproj" />
-    </ItemGroup>
-
 </Project>
