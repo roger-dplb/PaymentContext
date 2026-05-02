@@ -1,6 +1,6 @@
 using PaymentContext.Domain.Entities;
 
-namespace PaymenteContext.Tests.Entities;
+namespace PaymentContext.Tests.Entities;
 
 public class StudentTests
 {
