@@ -1,0 +1,9 @@
+<Project>
+
+    <PropertyGroup>
+        <AnalysisLevel>10.0</AnalysisLevel>
+        <AnalysisMode>Recommended</AnalysisMode>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+
+</Project>
