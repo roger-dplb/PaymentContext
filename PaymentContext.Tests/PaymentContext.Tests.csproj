@@ -20,7 +20,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\PaymentContext.Domain\PaymentContext.Domain.csproj"/>
-        <ProjectReference Include="..\PaymentContext.Shared\PaymentContext.Shared.csproj"/>
+        <ProjectReference Include="..\PaymentContext.Common\PaymentContext.Common.csproj"/>
     </ItemGroup>
 
 </Project>

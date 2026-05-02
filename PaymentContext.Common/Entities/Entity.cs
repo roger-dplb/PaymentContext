@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace PaymentContext.Shared.Entities;
+namespace PaymentContext.Common.Entities;
 
 public abstract class Entity
 {

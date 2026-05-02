@@ -1,5 +1,5 @@
 using PaymentContext.Domain.ValueObjects;
-using PaymentContext.Shared.Entities;
+using PaymentContext.Common.Entities;
 
 namespace PaymentContext.Domain.Entities;
 
@@ -23,7 +23,11 @@ public class Student(
 
     public void AddSubscription(Subscription subscription)
     {
-        foreach (var subs in Subscriptions) subs.Deactivate();
+        foreach (var subs in Subscriptions)
+        {
+            subs.Deactivate();
+        }
+
         _subscriptions.Add(subscription);
     }
 }
