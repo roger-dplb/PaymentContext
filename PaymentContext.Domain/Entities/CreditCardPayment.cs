@@ -9,7 +9,7 @@ public class CreditCardPayment(
     decimal totalPaid,
     Document document,
     string payer,
-    string address,
+    Address address,
     Email email,
     string holderName,
     string lastDigits,

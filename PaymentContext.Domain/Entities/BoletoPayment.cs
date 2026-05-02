@@ -9,7 +9,7 @@ public class BoletoPayment(
     decimal totalPaid,
     Document document,
     string payer,
-    string address,
+    Address address,
     Email email,
     string barCode) : Payment(paidDate, expireDate, total, totalPaid, document, payer, address, email)
 {
