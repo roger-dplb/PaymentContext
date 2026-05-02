@@ -14,5 +14,7 @@ public class BoletoPayment(
     string barCode) : Payment(paidDate, expireDate, total, totalPaid, document, payer, address, email)
 {
     public string BarCode { get; private set; } = barCode;
-    public string BoletoNumber { get; private set; } = Guid.NewGuid().ToString().Replace("-", "")[..10].ToUpper();
+
+    public string BoletoNumber { get; private set; } =
+        Guid.NewGuid().ToString().Replace("-", "")[..10].ToUpperInvariant();
 }

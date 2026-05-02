@@ -5,7 +5,7 @@ namespace PaymentContext.Tests.Entities;
 public class StudentTests
 {
     [Fact]
-    public void Should_Create_Student()
+    public void ShouldCreateStudent()
     {
         // var student = new Student()
     }

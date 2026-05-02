@@ -2,7 +2,7 @@ namespace PaymentContext.Domain.Entities;
 
 public class Subscription(DateTime? expirationDate)
 {
-    private readonly IList<Payment> _payments = new List<Payment>();
+    private readonly List<Payment> _payments = [];
 
     public DateTime CreateDate { get; private set; } = DateTime.Now;
     public DateTime LastUpdateDate { get; private set; } = DateTime.Now;
@@ -10,10 +10,7 @@ public class Subscription(DateTime? expirationDate)
     public IReadOnlyCollection<Payment> Payments => _payments.ToArray();
     public bool Active { get; private set; } = true;
 
-    public void AddPayment(Payment payment)
-    {
-        _payments.Add(payment);
-    }
+    public void AddPayment(Payment payment) => _payments.Add(payment);
 
     public void Deactivate()
     {

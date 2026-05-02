@@ -12,7 +12,7 @@ public abstract class Payment(
     Address address,
     Email email)
 {
-    public string Number { get; private set; } = Guid.NewGuid().ToString().Replace("-", "")[..10].ToUpper();
+    public string Number { get; private set; } = Guid.NewGuid().ToString().Replace("-", "")[..10].ToUpperInvariant();
     public DateTime PaidDate { get; private set; } = paidDate;
     public DateTime ExpireDate { get; private set; } = expireDate;
     public decimal Total { get; private set; } = total;
