@@ -1,5 +1,3 @@
-using System.Globalization;
-
 namespace PaymentContext.Common.Entities;
 
 public abstract class Entity

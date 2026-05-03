@@ -1,5 +1,3 @@
 namespace PaymentContext.Common.ValueObjects;
 
-public abstract class ValueObject
-{
-}
+public abstract record ValueObject;
