@@ -5,6 +5,9 @@ riderModule.iml
 /_ReSharper.Caches/
 *.DotSettings.user
 
+# JetBrains Rider / IntelliJ
+.idea/
+
 # Test/coverage output
 **/TestResults/
 coveragereport/
