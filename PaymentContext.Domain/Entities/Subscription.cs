@@ -1,6 +1,10 @@
+using ErrorOr;
+using PaymentContext.Common.Entities;
+using PaymentContext.Domain.Errors;
+
 namespace PaymentContext.Domain.Entities;
 
-public class Subscription(DateTime? expirationDate)
+public class Subscription(DateTime? expirationDate) : Entity
 {
     private readonly List<Payment> _payments = [];
 
@@ -10,7 +14,18 @@ public class Subscription(DateTime? expirationDate)
     public IReadOnlyCollection<Payment> Payments => _payments.ToArray();
     public bool Active { get; private set; } = true;
 
-    public void AddPayment(Payment payment) => _payments.Add(payment);
+    public ErrorOr<Success> AddPayment(Payment payment)
+    {
+        if (payment.PaidDate < DateTime.Now)
+        {
+            return PaymentErrors.InvalidPaidDate;
+        }
+        //TODO ADD OTHER VALIDATIONS
+
+        _payments.Add(payment);
+        return Result.Success;
+    }
+
 
     public void Deactivate()
     {
